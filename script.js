@@ -65,10 +65,23 @@ function calculate() {
       .replace(/cos/g, "Math.cos")
       .replace(/tan/g, "Math.tan");
 
+    // Convert trig functions to degrees
+    expression = expression.replace(/(Math\.(sin|cos|tan|asin|acos|atan))\(([^()]+?)\)/g, (match, fn, _, angle) => {
+      return `${fn}(((${angle}) * Math.PI) / 180)`;
+    });
+
+    // Handle percent and factorial
     expression = expression.replace(/(\d+(\.\d+)?)%(?=[^\d]|$)/g, "($1/100)");
     expression = expression.replace(/(\d+)!/g, (_, n) => factorial(+n));
 
     let result = eval(expression);
+
+    // Fix floating point rounding issue
+    if (typeof result === "number") {
+      result = parseFloat(result.toFixed(12));
+      result = +result.toString();
+    }
+
     if (typeof result === "function" || result === undefined || isNaN(result)) {
       showError();
     } else {
