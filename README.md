@@ -4,6 +4,11 @@ A modern, responsive scientific calculator built with **HTML**, **CSS**, and **J
 
 ---
 
+## 🚀 Live Demo
+🔗 Click here to use the calculator
+
+---
+
 ## 🚀 Features
 
 -  Basic operations: `+`, `-`, `×`, `÷`, `%`, `^`
