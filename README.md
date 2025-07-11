@@ -5,7 +5,7 @@ A modern, responsive scientific calculator built with **HTML**, **CSS**, and **J
 ---
 
 ## 🚀 Live Demo
-🔗 Click here to use the calculator
+🔗 Click here to use the calculator(https://fermcancino.github.io/scientific-calculator/)
 
 ---
 
