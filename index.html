@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <h2>Scientific Calculator</h2>
+    <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Theme">🌗</button>
+  </div>
+
+  <div class="calculator-container">
+    <div class="calculator">
+      <input type="text" id="display" oninput="syncExpression()" placeholder="0" />
+
+      <div class="inline-history">
+        <button onclick="clearHistory()" class="clear-history" style="display: none;">Clear History</button>
+        <ul id="historyList"></ul>
+      </div>
+
+      <div class="buttons">
+        <div class="row">
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="memoryAdd()">M+</button>
+          <button onclick="memoryRecall()">MR</button>
+          <button onclick="memoryClear()">MC</button>
+        </div>
+
+        <div class="row">
+          <button onclick="toggleShift()" id="shiftBtn">Shift</button>
+          <button onclick="handleSqrt()" id="sqrtBtn">√</button>
+          <button onclick="handlePiOrLn()" id="piBtn">π</button>
+          <button onclick="handleEOrFactorial()" id="eBtn">e</button>
+        </div>
+
+        <div class="row scientific">
+          <button onclick="handleTrig('sin')" id="sinBtn">sin</button>
+          <button onclick="handleTrig('cos')" id="cosBtn">cos</button>
+          <button onclick="handleTrig('tan')" id="tanBtn">tan</button>
+          <button onclick="handleLogOrPower()" id="logPowerBtn">log</button>
+        </div>
+
+        <div class="row">
+          <button onclick="appendValue('(')">(</button>
+          <button onclick="appendValue(')')">)</button>
+          <button onclick="appendValue('%')">%</button>
+          <button onclick="appendValue('/')">/</button>
+        </div>
+
+        <div class="row">
+          <button onclick="appendValue('7')">7</button>
+          <button onclick="appendValue('8')">8</button>
+          <button onclick="appendValue('9')">9</button>
+          <button onclick="appendValue('*')">*</button>
+        </div>
+        <div class="row">
+          <button onclick="appendValue('4')">4</button>
+          <button onclick="appendValue('5')">5</button>
+          <button onclick="appendValue('6')">6</button>
+          <button onclick="appendValue('-')">-</button>
+        </div>
+        <div class="row">
+          <button onclick="appendValue('1')">1</button>
+          <button onclick="appendValue('2')">2</button>
+          <button onclick="appendValue('3')">3</button>
+          <button onclick="appendValue('+')">+</button>
+        </div>
+        <div class="row">
+          <button onclick="appendValue('0')">0</button>
+          <button onclick="appendValue('.')">.</button>
+          <button onclick="backspace()">⌫</button>
+          <button onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
