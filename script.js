@@ -70,7 +70,10 @@ function calculate() {
       return `${fn}(((${angle}) * Math.PI) / 180)`;
     });
 
-    // Handle percent and factorial
+    // Add * for implicit multiplication (e.g., 2sin(90), 5(2+3), )( )
+    expression = expression.replace(/(\d|\))(?=[a-zA-Z(])/g, "$1*");
+
+    // Handle percentage and factorial
     expression = expression.replace(/(\d+(\.\d+)?)%(?=[^\d]|$)/g, "($1/100)");
     expression = expression.replace(/(\d+)!/g, (_, n) => factorial(+n));
 
