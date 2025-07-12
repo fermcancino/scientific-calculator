@@ -14,17 +14,17 @@ A modern, responsive scientific calculator built with **HTML**, **CSS**, and **J
 -  Basic operations: `+`, `-`, `×`, `÷`, `%`, `^`
 -  Decimal and parentheses support
 -  Scientific functions:
-  - `sin`, `cos`, `tan` and their inverses
-  - `log`, `ln`, `√`, `∛`, `x²`, `!`
-  - Constants: `π`, `e`
+  ° `sin`, `cos`, `tan` and their inverses
+  ° `log`, `ln`, `√`, `∛`, `x²`, `!`
+  ° Constants: `π`, `e`
 -  Shift button to toggle between:
-  - `sin ↔ sin⁻¹`
-  - `cos ↔ cos⁻¹`
-  - `tan ↔ tan⁻¹`
-  - `log ↔ x²`
-  - `√ ↔ ∛`
-  - `π ↔ ln`
-  - `e ↔ !` (factorial)
+  ° `sin ↔ sin⁻¹`
+  ° `cos ↔ cos⁻¹`
+  ° `tan ↔ tan⁻¹`
+  ° `log ↔ x²`
+  ° `√ ↔ ∛`
+  ° `π ↔ ln`
+  ° `e ↔ !` (factorial)
 -  Error handling with shake animation
 -  Memory functions: `M+`, `MR`, `MC`
 -  Light/Dark mode toggle 🌗
